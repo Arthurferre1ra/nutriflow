@@ -1,0 +1,3 @@
+src/tests/application/CalcularReposicaoPosExercicio.test.ts(1,54): error TS2307: Cannot find module '../../application/useCases/CalcularReposicaoPosExercicio.js' or its corresponding type declarations.
+src/tests/domain/CalculadoraNutricional.test.ts(1,40): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../../domain/services/CalculadoraNutricional.js'?
+src/tests/domain/CalculadoraNutricional.test.ts(2,45): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../../domain/entities/DistribuicaoMacronutrientes.js'?

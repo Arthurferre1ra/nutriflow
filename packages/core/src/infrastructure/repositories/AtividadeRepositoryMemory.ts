@@ -1,5 +1,5 @@
-import { Atividade } from "../../domain/entities/Atividade";
-import { AtividadeRepository } from "../interfaces/AtividadeRepository";
+import type { AtividadeRepository } from "../../application/interfaces/AtividadeRepository.js";
+import { Atividade } from "../../domain/entities/Atividade.js";
 
 export class AtividadeRepositoryMemory implements AtividadeRepository {
   private atividades: Map<string, Atividade[]> = new Map();

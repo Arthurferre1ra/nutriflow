@@ -1,5 +1,5 @@
-import { CalculadoraNutricional } from "../../domain/services/CalculadoraNutricional";
-import { DistribuicaoMacronutrientes } from "../../domain/entities/DistribuicaoMacronutrientes";
+import { CalculadoraNutricional } from "../../domain/services/CalculadoraNutricional.js";
+import { DistribuicaoMacronutrientes } from "../../domain/entities/DistribuicaoMacronutrientes.js";
 
 describe("CalculadoraNutricional", () => {
   let calculadora: CalculadoraNutricional;
@@ -19,9 +19,9 @@ describe("CalculadoraNutricional", () => {
 
     const resultado = calculadora.calcular(totalKcal, distribuicao);
 
-    expect(resultado.carboidratosGramas).toBe(137.5);
-    expect(resultado.proteinasGramas).toBe(62.5);
-    expect(resultado.gordurasGramas).toBe(22.22);
+    expect(resultado.carboidratos).toBe(137.5);
+    expect(resultado.proteinas).toBe(62.5);
+    expect(resultado.gorduras).toBe(22.22);
   });
 
   it("deve calcular macronutrientes corretamente com distribuicao customizada (40%, 40%, 20%)", () => {
@@ -35,9 +35,9 @@ describe("CalculadoraNutricional", () => {
 
     const resultado = calculadora.calcular(totalKcal, distribuicao);
 
-    expect(resultado.carboidratosGramas).toBe(250);
-    expect(resultado.proteinasGramas).toBe(250);
-    expect(resultado.gordurasGramas).toBe(55.56);
+    expect(resultado.carboidratos).toBe(250);
+    expect(resultado.proteinas).toBe(250);
+    expect(resultado.gorduras).toBe(55.56);
   });
 
   it("deve lançar erro se a soma dos percentuais não for 100%", () => {
